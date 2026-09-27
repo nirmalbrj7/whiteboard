@@ -46,7 +46,8 @@ Anyone holding an invitation can join. Room names are display names, not verifie
 
 ## Whiteboard tools
 
-- Infinite canvas, mouse/trackpad pan, touch pinch/zoom, zoom controls, and fit-all.
+- A blank first lesson with no preloaded teaching content.
+- Infinite canvas, mouse/trackpad pan, touch pinch/zoom, zoom controls and presets, and fit-all.
 - Clickable board overview for navigating larger lessons.
 - Pen, eraser, text, shapes, arrows, images, frames, selection, grouping, and undo/redo.
 - Sticky notes, grid, background colors, presentation view, and fullscreen.
@@ -54,6 +55,8 @@ Anyone holding an invitation can join. Room names are display names, not verifie
 - Automatic IndexedDB saves, including inserted images.
 - Editable `.excalidraw` exports and PNG/SVG exports.
 - Import `.excalidraw` boards and compatible images containing embedded Excalidraw data. Use the image tool or paste/drop an image to insert an ordinary picture.
+
+Choose **Fullscreen** above the board to expand the canvas, and **Exit fullscreen** or Escape to return. If the browser blocks native fullscreen, the app still switches to its canvas-only layout. Click the zoom percentage at the bottom right to select a preset, use the adjacent minus/plus controls, or choose **Fit all** to see every object. On a blank board, Fit all resets the view to 100%.
 
 Lessons are local to the browser/device and site address. Clearing site data removes them. Export `.excalidraw` backups to keep or transfer lessons. Browser storage is not a cloud backup. Opening a room invitation does not transmit your existing local lessons; joining creates a separate local board for that session.
 
@@ -65,7 +68,7 @@ npm run build
 npm run preview
 ```
 
-Protocol tests cover updates, deleted objects, concurrent version identifiers, malformed messages, image data, and invitation parsing. Manual browser verification includes two live participants, edits in both directions, shared undo, view-only permissions, saving/reload, and desktop/mobile layout. Physical touchscreen input, actual screen capture, restrictive-network connectivity, and large-class performance require testing on the target devices.
+Protocol tests cover updates, deleted objects, concurrent version identifiers, malformed messages, image data, and invitation parsing. Manual browser verification includes two live participants, edits in both directions, shared undo, view-only permissions, saving/reload, fullscreen, zoom presets, and resizing between desktop/mobile layouts. Export generation was checked, but saving downloads to disk in the embedded browser was not verified. Physical touchscreen input, actual screen capture, restrictive-network connectivity, and large-class performance require testing on the target devices.
 
 ## Main files
 
